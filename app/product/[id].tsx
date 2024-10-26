@@ -1,4 +1,4 @@
-import { useLocalSearchParams } from "expo-router";
+import { Stack, useLocalSearchParams } from "expo-router";
 import products from "@/assets/products.json"
 import { Card } from "@/components/ui/card";
 import { Image } from "@/components/ui/image";
@@ -16,6 +16,8 @@ export default function ProductDetailsScreen(){
         return(<Text>Product not found</Text>)
     }
     return(
+      <Box className="flex-1 p-2">
+        <Stack.Screen  options={{title: product.name}} />
         <Card className="p-5 rounded-lg max-w-[560px] flex-1">
         <Image
           source={{
@@ -50,5 +52,6 @@ export default function ProductDetailsScreen(){
           </Button>
         </Box>
       </Card>
+      </Box>
     )
 }
