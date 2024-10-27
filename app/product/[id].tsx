@@ -17,7 +17,8 @@ export default function ProductDetailsScreen(){
     }
     return(
       <Box className="flex-1 p-2">
-        <Stack.Screen  options={{title: product.name}} />
+        {/*permet de renommer l'entete de l'application avec le nom du produit*/}
+        <Stack.Screen  options={{title: product.name}} /> 
         <Card className="p-5 rounded-lg max-w-[560px] flex-1">
         <Image
           source={{
